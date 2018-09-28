@@ -13,15 +13,27 @@ print("Du utvärderar dina val och kommer fram till att du antingen kan försök
 current_position = 1
 
 #första valet
-first_room = input("Vad tänker du göra? ")
+while current_position == 1:
+    first_room = input("Vad tänker du göra? ")
+    #händelser för första valet
+    def first_choice(input):
+        if "dörr" or "bakåt" or "öppna" or "ut" in first_room:
+            current_position = 1
+            print(current_position)
+        elif "korridor" or "vänster" in first_room:
+            current_position = 2
+            print(current_position)
+        elif "trapp" or "höger" in first_room:
+            current_position = 3
+            print(current_position)
+        return current_position
 
-#händelser för första valet
-def first_choice(first_room):
-    if "dörr" or "bakåt" or "öppna" or "ut" in first_room:
-        print("Dörr")
-    if "trapp" or "höger" in first_room:
-        print("Trapp")
-    if "korridor" or "vänster" in first_room:
-        print("korridor")
+    first_choice(input)
 
-first_choice(first_room)
+    if current_position == 1:
+        print("Du försöker öppna dörren, men den har gått i baklås.")
+    if current_position != 1:
+        break
+
+if current_position == 2:
+    print("Du går in i korridoren.")
