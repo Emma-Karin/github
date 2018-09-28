@@ -13,17 +13,15 @@ print("Du utvärderar dina val och kommer fram till att du antingen kan försök
 current_position = 1
 
 #första valet
-ut_eller_in = input("Vad tänker du göra? ")
+first_room = input("Vad tänker du göra? ")
 
 #händelser för första valet
-if "
+def first_choice(first_room):
+    if "dörr" or "bakåt" or "öppna" or "ut" in first_room:
+        print("Dörr")
+    if "trapp" or "höger" in first_room:
+        print("Trapp")
+    if "korridor" or "vänster" in first_room:
+        print("korridor")
 
-if "trapp" or "höger" in ut_eller_in
-
-
-
-    
-        
-
-
-      
+first_choice(first_room)
