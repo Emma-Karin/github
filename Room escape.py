@@ -37,3 +37,4 @@ while current_position == 1:
 
 if current_position == 2:
     print("Du går in i korridoren.")
+    print(meh)
